@@ -3,11 +3,14 @@ import numpy as np
 
 def llfr(A, R, f, q1):
 	"""
-	param A: The inter-item Correlation Matrix, numpy.array shape =(m,m).
-	param R: The Rating Matrix, numpy.array shape=(n,m).
-	param f: the number of latent factors.
-	param q1: A random unit vector, numpy.array shape=(m).
-	return : Matrix Pi whose rows are the recommendation vectors for every user, numpy.array shape=(n,m).
+	Args:
+	param A (numpy.array): The inter-item Correlation Matrix, shape =(m,m).
+	param R (numpy.array): The Rating Matrix, shape=(n,m).
+	param f (int): the number of latent factors.
+	param q1 (numpy.array): A random unit vector, shape=(m).
+
+	Returns:
+	numpy.array : Matrix Pi whose rows are the recommendation vectors for every user, shape=(n,m).
 	"""
     m = A.shape[0]
     Q = np.ones(shape=(m,f+2))
